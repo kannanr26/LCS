@@ -1,1 +1,4 @@
 # LCS
+mvn spring-boot:run
+
+mvn test
