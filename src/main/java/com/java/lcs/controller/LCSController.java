@@ -19,7 +19,7 @@ public class LCSController {
 	
 	private boolean isValid=true;
 	private String msg;
-	@PostMapping("/lms")
+	@PostMapping("/lcs")
 	public ResponseEntity<LCS> lcs(@RequestBody String lcs) {
 		
 	String[] str=	validate(lcs);
@@ -35,7 +35,7 @@ public class LCSController {
 		return  ResponseEntity.badRequest().body(new LCS(null,msg));
 	}
 	
-	@PostMapping("/lms2")
+	@PostMapping("/lcs2")
 	public LCS lcs2(@RequestBody LCSRequest lcsRequest) {
 		String lcStr=lcsService.findLCS(lcsRequest.getSetofStrings().getValues());
 		String[] value= {lcStr};
